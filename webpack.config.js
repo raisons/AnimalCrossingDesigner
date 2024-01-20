@@ -10,7 +10,7 @@ module.exports = {
   mode: 'development',
   entry: ['./app/index'],
   output: {
-    path: path.join(__dirname),
+    path: path.join(__dirname, "public"),
     filename: 'bundle.js',
   },
   resolve: {
@@ -82,7 +82,7 @@ module.exports = {
     new ForkTsCheckerWebpackPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'static', 'index.html'),
+      template: path.resolve(__dirname, 'build', 'index.html'),
       filename: 'index.html',
     }),
     //new CopyPlugin([{ from: 'src/static', to: 'static' }]),

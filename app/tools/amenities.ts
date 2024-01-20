@@ -13,15 +13,78 @@ asyncAmenitiesDefinition.value = {
     menuScaling: new paper.Point(0.2, 0.2),
     offset: new paper.Point(-3.5, -1.85),
   },
-  airport: {},
+  airport: {
+    scaling: new paper.Point(0.015, 0.015),
+    size: new paper.Size(3, 3),
+    offset: new paper.Point(-1.5, -3),
+  },
   center: {
+    scaling: new paper.Point(0.015, 0.015),
+    size: new paper.Size(12, 10),
+    offset: new paper.Point(-6, -4),
     extraObject() {
       const baseGround = new paper.Path.Rectangle(
         new paper.Rectangle(0, 0, 12, 10),
         new paper.Size(1, 1),
       );
       baseGround.fillColor = colors.campground.color;
-      baseGround.position = new paper.Point(1, 7);
+      baseGround.position = new paper.Point(6, 5);
+      return baseGround;
+    },
+  },
+  museum: {
+    scaling: new paper.Point(0.015, 0.015),
+    size: new paper.Size(7, 4),
+    offset: new paper.Point(-3.5, -3.5),
+    extraObject() {
+      const baseGround = new paper.Path.Rectangle(
+        new paper.Rectangle(0, 0, 7, 4),
+        new paper.Size(0.5, 0.5),
+      );
+      baseGround.fillColor = colors.campground.color;
+      baseGround.position = new paper.Point(3.5, 2);
+      return baseGround;
+    },
+  },
+  campsite: {
+    scaling: new paper.Point(0.015, 0.015),
+    size: new paper.Size(4, 4),
+    offset: new paper.Point(-2, -3.5),
+    extraObject() {
+      const baseGround = new paper.Path.Rectangle(
+        new paper.Rectangle(0, 0, 4, 4),
+        new paper.Size(0.5, 0.5),
+      );
+      baseGround.fillColor = colors.campground.color;
+      baseGround.position = new paper.Point(2, 2);
+      return baseGround;
+    },
+  },
+  nook: {
+    scaling: new paper.Point(0.015, 0.015),
+    size: new paper.Size(7, 4),
+    offset: new paper.Point(-3.5, -3.5),
+    extraObject() {
+      const baseGround = new paper.Path.Rectangle(
+        new paper.Rectangle(0, 0, 7, 4),
+        new paper.Size(0.5, 0.5),
+      );
+      baseGround.fillColor = colors.campground.color;
+      baseGround.position = new paper.Point(3.5, 2);
+      return baseGround;
+    },
+  },
+  able: {
+    scaling: new paper.Point(0.015, 0.015),
+    size: new paper.Size(5, 4),
+    offset: new paper.Point(-2.5, -3.5),
+    extraObject() {
+      const baseGround = new paper.Path.Rectangle(
+        new paper.Rectangle(0, 0, 5, 4),
+        new paper.Size(0.5, 0.5),
+      );
+      baseGround.fillColor = colors.campground.color;
+      baseGround.position = new paper.Point(2.5, 2);
       return baseGround;
     },
   },
